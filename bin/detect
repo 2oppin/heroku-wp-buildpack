@@ -1,0 +1,21 @@
+#!/usr/bin/env bash
+
+# convenience functions
+source "$(cd $(dirname $0); cd ..; pwd)"/bin/util/common.sh
+
+if [ -f $1/config/public/wp-config.php ]; then
+  echo "WordPress"
+  exit 0
+else
+	error <<-EOF
+		Application not supported by this buildpack!
+		
+		The '2oppin/heroku-wp-woocomerce' buildpack is set on this application, but was
+		unable to detect a wp-config file.
+		
+		A PHP app on Heroku requires a 'config/public/wp-config.php' at the root of
+		the directory structure.
+		
+		If you are trying to deploy a WordPress application, ensure that this file is present in your app.
+	EOF
+fi

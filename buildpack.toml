@@ -1,0 +1,8 @@
+[buildpack]
+name = "2oppin's WP"
+
+	[publish.Ignore]
+	files = [
+		".gitignore",
+		".github/"
+	]

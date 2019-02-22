@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+# bin/release <build-dir>
+
+cat <<EOF
+---
+addons:
+  - cleardb:ignite
+  - memcachier:dev
+config_vars:
+  PATH: /app/bin:/app/vendor/nginx/sbin:/app/vendor/php/bin:/app/vendor/php/sbin:/usr/local/bin:/usr/bin:/bin
+  ENABLE_SYSTEM_ACCESS: false
+  FORCE_SSL_LOGIN: true
+  FORCE_SSL_ADMIN: true
+  WP_CACHE: true
+  WORDPRESS_DIR: wordpress
+  WORDPRESS_VERSION: latest
+EOF
