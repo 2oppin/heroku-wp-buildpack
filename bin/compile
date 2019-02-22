@@ -6,11 +6,11 @@ cache_dir=$2/php
 WORDPRESS_VERSION="${WORDPRESS_VERSION:-latest}"
 WORDPRESS_URL="http://wordpress.org/wordpress-${WORDPRESS_VERSION}.tar.gz"
 
+cd $build_dir
 # -----------------------------------------------------------
 # WordPress
 echo "-----> Installing WordPress v^${WORDPRESS_VERSION}"
 # -----------------------------------------------------------
-
 echo "-----> Download WordPress v^${WORDPRESS_VERSION}"
 curl --max-time 60 --location $WORDPRESS_URL | tar xz
 
@@ -25,6 +25,6 @@ else
   echo "       WORDPRESS_DIR not set. Installing WordPress to wordpress/"
   WORDPRESS_INSTALLATION_DIR="wordpress"
 fi
-
-echo "-----> Copy config/public of your app over standard WP"
-cp -rf config/public/* $WORDPRESS_INSTALLATION_DIR
+cd $build_dir
+echo "-----> Copy config/public of your app over standard WP (${WORDPRESS_INSTALLATION_DIR})"
+cp -rf config/public/* "${WORDPRESS_INSTALLATION_DIR}/"

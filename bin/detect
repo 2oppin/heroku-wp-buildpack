@@ -10,7 +10,7 @@ else
 	error <<-EOF
 		Application not supported by this buildpack!
 		
-		The '2oppin/heroku-wp-woocomerce' buildpack is set on this application, but was
+		The '2oppin/heroku-wp-buildpack' buildpack is set on this application, but was
 		unable to detect a wp-config file.
 		
 		A PHP app on Heroku requires a 'config/public/wp-config.php' at the root of

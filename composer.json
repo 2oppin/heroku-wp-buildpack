@@ -1,20 +1,14 @@
 {
 	"name": "2oppin/heroku-wp-buildpack",
-	"description": "Toolkit for starting a PHP application locally, with or without foreman, using the same config for PHP/HHVM and Apache2/Nginx as on Heroku",
-	"keywords": ["heroku", "foreman", "php", "hhvm", "apache", "apache2", "nginx"],
-	"homepage": "https://github.com/heroku/heroku-wp-buildpack",
+	"description": "Toolkit for starting a Wordpress",
+	"keywords": ["heroku", "blog", "wordpress", "php"],
+	"homepage": "https://github.com/2oppin/heroku-wp-buildpack",
 	"type": "library",
 	"license": "MIT",
 	"authors": [
 		{
-			"name": "David Zuelke",
-			"email": "dz@heroku.com"
+			"name": "Denis Tatarenko",
+			"email": "2oppin@gmail.com"
 		}
-	],
-	"bin": [
-		"bin/heroku-hhvm-apache2",
-		"bin/heroku-hhvm-nginx",
-		"bin/heroku-php-apache2",
-		"bin/heroku-php-nginx"
 	]
 }
